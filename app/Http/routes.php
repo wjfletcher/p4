@@ -12,8 +12,53 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/beers', 'BeerController@getIndex');
+
+Route::get('/beers/add', 'BeerController@getAdd');
+
+Route::post('/beers/add', 'BeerController@postAdd');
+
+Route::get('/beers/edit/{name}', 'BeerController@getEdit');
+
+Route::post('/beers/edit/{name}', 'BeerController@postEdit');
+
+
+
+Route::get('/breweries', 'BreweryController@getIndex');
+
+Route::get('/breweries/add', 'BreweryController@getAdd');
+
+Route::post('/breweries/add', 'BreweryController@postAdd');
+
+Route::get('/breweries/edit/{name}', 'BreweryController@getEdit');
+
+Route::post('/breweries/edit/{name}', 'BreweryController@postEdit');
+
+
+
+
+# Show login form
+Route::get('/login', 'Auth\AuthController@getLogin');
+
+# Process login form
+Route::post('/login', 'Auth\AuthController@postLogin');
+
+# Process logout
+Route::get('/logout', 'Auth\AuthController@getLogout');
+
+# Show registration form
+Route::get('/register', 'Auth\AuthController@getRegister');
+
+# Process registration form
+Route::post('/register', 'Auth\AuthController@postRegister');
+
+
+
+
+//testing routes
 
 Route::get('/test', function () {
     echo "Hi!";
