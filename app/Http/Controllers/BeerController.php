@@ -16,13 +16,13 @@ class BeerController extends Controller
      */
     public function getIndex()
     {
-        
+        echo "beer home";
     }
 
     
     public function getAdd()
     {
-        //
+        echo "add beer";
     }
 
     
