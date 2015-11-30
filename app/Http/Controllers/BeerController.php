@@ -16,7 +16,7 @@ class BeerController extends Controller
      */
     public function getIndex()
     {
-        echo "beer home";
+        return view("beers.index");
     }
 
     
