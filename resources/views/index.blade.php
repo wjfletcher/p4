@@ -15,6 +15,6 @@
                 <button class="btn btn-info">login</button>
             </form>
 <form class="genbutton" action="/breweries">
-                <button class="btn btn-info">Breweries</button>
+                <button class="btn btn-info"></button>
             </form>
 @stop
