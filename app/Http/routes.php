@@ -21,9 +21,9 @@ Route::get('/beers/add', 'BeerController@getAdd');
 
 Route::post('/beers/add', 'BeerController@postAdd');
 
-Route::get('/beers/edit/{name}', 'BeerController@getEdit');
+Route::get('/beers/edit/{id?}', 'BeerController@getEdit');
 
-Route::post('/beers/edit/{name}', 'BeerController@postEdit');
+Route::post('/beers/edit', 'BeerController@postEdit');
 
 
 
@@ -33,9 +33,9 @@ Route::get('/breweries/add', 'BreweryController@getAdd');
 
 Route::post('/breweries/add', 'BreweryController@postAdd');
 
-Route::get('/breweries/edit/{name}', 'BreweryController@getEdit');
+Route::get('/breweries/edit/{id?}', 'BreweryController@getEdit');
 
-Route::post('/breweries/edit/{name}', 'BreweryController@postEdit');
+Route::post('/breweries/edit', 'BreweryController@postEdit');
 
 
 

@@ -25,6 +25,7 @@ class CreateBreweriesTable extends Migration
         $table->string('location');
         $table->text('description');
         $table->integer('rating');
+        $table->string('brewery_image');
           
        });
 

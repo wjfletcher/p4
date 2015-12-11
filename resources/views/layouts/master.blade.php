@@ -25,6 +25,12 @@
 
 <body>
 
+    @if(\Session::has('flash_message'))
+        <div class='flash_message'>
+            {{ \Session::get('flash_message') }}
+        </div>
+    @endif
+    
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">

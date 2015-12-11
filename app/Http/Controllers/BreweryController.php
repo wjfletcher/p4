@@ -14,9 +14,12 @@ class BreweryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getIndex()
+    public function getIndex(Request $request)
     {
-       echo "index"; 
+        
+        $breweries = \p4\Brewery::orderBy('id','DESC')->get();
+        
+        return view("breweries.index")->with('breweries', $breweries);
     }
 
     

@@ -26,6 +26,7 @@ class CreateBeersTable extends Migration
         $table->string('beer_type');
         $table->text('description');
         $table->integer('rating');
+        $table->string('beer_label');
            
        });
     }

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class BeersTableSeeder extends Seeder
+class BreweriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

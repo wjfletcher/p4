@@ -14,33 +14,66 @@ class BeerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getIndex()
+    public function getIndex(Request $request)
     {
-        return view("beers.index");
+        
+        $beers = \p4\Beer::orderBy("id","DESC")->get();
+        
+        return view("beers.index")->with("beers", $beers);
     }
 
     
     public function getAdd()
     {
-        echo "add beer";
+        return view("beers.add");
     }
 
     
-    public function postAdd()
+    public function postAdd(Request $request)
     {
-        //
+        $beer = new \p4\Beer;
+        
+        $beer->beer_name = $request->name;
+        $beer->brewery_name = $request->brewery;
+        $beer->beer_type = $request->type;
+        $beer->description = $request->description;
+        $beer->rating = $request->rating;
+        $beer->beer_label = $request->label;
+        
+        $beer->save();
+        
+        \Session::flash("flash_message","Your beer was added!");
+        return redirect("/beers/");
     }
 
     
-    public function getEdit()
-    {
-        //
+    public function getEdit($id = null) {
+        
+        $beer = \p4\Beer::find($id);
+        if(is_null($beer)) {
+            \Session::flash("flash_message","Couldn't find that beer.");
+            return redirect("/beers");
+        }
+        
+        return view("beers.edit")
+            ->with(["beer" => $beer]);
     }
 
     
-    public function postEdit()
-    {
-        //
+    public function postEdit(Request $request){
+        
+        $beer = \p4\Beer::find($request->id);
+        $beer->beer_name = $request->name;
+        $beer->brewery_name = $request->brewery;
+        $beer->beer_type = $request->type;
+        $beer->description = $request->description;
+        $beer->rating = $request->rating;
+        $beer->beer_label = $request->label;
+        
+        $beer->save();
+        
+        return redirect("/beers");
+        
     }
 
     
