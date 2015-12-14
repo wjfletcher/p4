@@ -15,30 +15,31 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/beers', 'BeerController@getIndex');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/beers', 'BeerController@getIndex');
 
-Route::get('/beers/add', 'BeerController@getAdd');
+    Route::get('/beers/add', 'BeerController@getAdd');
 
-Route::post('/beers/add', 'BeerController@postAdd');
+    Route::post('/beers/add', 'BeerController@postAdd');
 
-Route::get('/beers/edit/{id?}', 'BeerController@getEdit');
+    Route::get('/beers/edit/{id?}', 'BeerController@getEdit');
 
-Route::post('/beers/edit', 'BeerController@postEdit');
+    Route::post('/beers/edit', 'BeerController@postEdit');
 
-Route::get('/beers/delete/{id?}', 'BeerController@getDelete');
+    Route::get('/beers/delete/{id?}', 'BeerController@getDelete');
 
 
 
-Route::get('/breweries', 'BreweryController@getIndex');
+    Route::get('/breweries', 'BreweryController@getIndex');
 
-Route::get('/breweries/add', 'BreweryController@getAdd');
+    Route::get('/breweries/add', 'BreweryController@getAdd');
 
-Route::post('/breweries/add', 'BreweryController@postAdd');
+    Route::post('/breweries/add', 'BreweryController@postAdd');
 
-Route::get('/breweries/edit/{id?}', 'BreweryController@getEdit');
+    Route::get('/breweries/edit/{id?}', 'BreweryController@getEdit');
 
-Route::post('/breweries/edit', 'BreweryController@postEdit');
-
+    Route::post('/breweries/edit', 'BreweryController@postEdit');
+});
 
 
 

@@ -17,7 +17,7 @@ class BeerController extends Controller
     public function getIndex(Request $request)
     {
         
-        $beers = \p4\Beer::orderBy("id","DESC")->get();
+        $beers = \p4\Beer::where("user_id","=",\Auth::id())->orderBy("id","DESC")->get();
         
         return view("beers.index")->with("beers", $beers);
     }
@@ -33,6 +33,7 @@ class BeerController extends Controller
     {
         $beer = new \p4\Beer;
         
+        $beer->user_id = \Auth::id();
         $beer->beer_name = $request->name;
         $beer->brewery_name = $request->brewery;
         $beer->beer_type = $request->type;
