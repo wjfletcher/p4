@@ -77,9 +77,12 @@ class BeerController extends Controller
     }
 
     
-    public function postDelete()
-    {
-        //
+    public function getDelete($beer_id){
+        $beer = \p4\Beer::find($beer_id);
+        
+        $beer->delete();
+        
+        return redirect("/beers");
     }
 
     

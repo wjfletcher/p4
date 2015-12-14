@@ -25,6 +25,8 @@ Route::get('/beers/edit/{id?}', 'BeerController@getEdit');
 
 Route::post('/beers/edit', 'BeerController@postEdit');
 
+Route::get('/beers/delete/{id?}', 'BeerController@getDelete');
+
 
 
 Route::get('/breweries', 'BreweryController@getIndex');
