@@ -14,6 +14,7 @@ class BeersTableSeeder extends Seeder
         DB::table('beers')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+        'user_id' => 1,
         'brewery_name' => 'Sam Adams',
         'beer_name' => 'Octoberfest',
         'beer_type' => 'Amber',
@@ -25,6 +26,7 @@ class BeersTableSeeder extends Seeder
          DB::table('beers')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+        'user_id' => 2,
         'brewery_name' => 'Harpoon',
         'beer_name' => 'IPA',
         'beer_type' => 'IPA',
