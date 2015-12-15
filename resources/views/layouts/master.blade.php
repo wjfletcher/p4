@@ -40,39 +40,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Warren Fletcher</a>
+                <a class="navbar-brand" href="/"><img src="img/beerdrinkerlogo.png"></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
+                    @if(Auth::check())
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/beers">Beers</a></li>
+                        <li><a href="/breweries">Breweries</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    @else
+                        <li><a href="/beers">Beers</a></li>
+                        <li><a href="/breweries">Breweries</a></li>
+                        <li><a href="/login">Log in</a></li>
+                        <li><a href="/register">Register</a></li>
+                    @endif
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project 1 <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other projects <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li class="title">Portfolio</li>
                             <li><a href="http://p1.wjfletcher.me">View</a></li>
                             <li><a href="https://github.com/wjfletcher/p1">Github</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project 2 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
                             <li class="title">XKCD Password Generator</li>
                             <li><a href="http://p2.wjfletcher.me">View</a></li>
                             <li><a href="https://github.com/wjfletcher/p2">Github</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project 3 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
                             <li class="title">Developers Best Friend</li>
                             <li><a href="#">View</a></li>
                             <li><a href="https://github.com/wjfletcher/p3">Github</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project 4 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">View</a></li>
-                            <li><a href="#">Github</a></li>
+                            <li class="title">Developers Best Friend</li>
+                            <li><a href="https://p4.wjfletcher.me">View</a></li>
+                            <li><a href="https://github.com/wjfletcher/p4">Github</a></li>
                         </ul>
                     </li>
 
