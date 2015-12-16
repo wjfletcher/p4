@@ -11,26 +11,26 @@ class BreweriesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('beers')->insert([
+        DB::table('breweries')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-        'brewery_name' => 'Sam Adams',
-        'beer_name' => 'Octoberfest',
-        'beer_type' => 'Amber',
-        'description' => 'Seasonal beer for fall. Medium bodied with great flavor. Love the reddish color to it!',
+        'user_id' => 1,
+        'brewery_name' => 'Magic Hat',
+        'Location' => 'Burlington, VT',
+        'description' => 'Very quirky brewery. There\'s a guided tour or you can go on a self guided tour. A video presentation gives most of the details about the process, and you get to wonder around and see the... unique artwork. You then get to try four beers at the bar.',
         'rating' =>'9.5',
-        'beer_label' => 'http://www.warrenbeer.com/warren/images/products/beer/sam_adams/octoberfest/logo.jpg'
+        'brewery_image' => 'http://img2.10bestmedia.com/Images/Photos/296764/IMG-5214_54_990x660.jpg'
     ]);
         
-         DB::table('beers')->insert([
+         DB::table('breweries')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-        'brewery_name' => 'Harpoon',
-        'beer_name' => 'IPA',
-        'beer_type' => 'IPA',
-        'description' => 'It\'s an IPA, but it\'s not as hoppy as the average IPA. Great go to beer.',
-        'rating' =>'9.0',
-        'beer_label' => 'http://amoskeagbeverages.com/wp-content/uploads/2014/08/HARPOON-IPA.jpg'
+        'user_id' => 2,
+        'brewery_name' => 'Magic Hat',
+        'Location' => 'Burlington, VT',
+        'description' => 'Very quirky brewery. There\'s a guided tour or you can go on a self guided tour. A video presentation gives most of the details about the process, and you get to wonder around and see the... unique artwork. You then get to try four beers at the bar.',
+        'rating' =>'9.5',
+        'brewery_image' => 'http://img2.10bestmedia.com/Images/Photos/296764/IMG-5214_54_990x660.jpg'
     ]);
     }
 }

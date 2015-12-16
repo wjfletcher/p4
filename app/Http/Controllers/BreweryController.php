@@ -17,39 +17,71 @@ class BreweryController extends Controller
     public function getIndex(Request $request)
     {
         
-        $breweries = \p4\Brewery::orderBy('id','DESC')->get();
+        $breweries = \p4\Brewery::where("user_id","=",\Auth::id())->orderBy("id","DESC")->get();
         
-        return view("breweries.index")->with('breweries', $breweries);
+        return view("breweries.index")->with("breweries", $breweries);
     }
 
     
     public function getAdd()
     {
-        echo "add a brewery here";
+        return view("breweries.add");
     }
 
     
-    public function postAdd()
+    public function postAdd(Request $request)
     {
-        echo "post the added brewery";
+        $brewery = new \p4\Brewery;
+        
+        $brewery->user_id = \Auth::id();
+        $brewery->brewery_name = $request->brewery;
+        $brewery->location = $request->location;
+        $brewery->description = $request->description;
+        $brewery->rating = $request->rating;
+        $brewery->brewery_image = $request->image;
+        
+        $brewery->save();
+        
+        \Session::flash("flash_message","Your brewery was added!");
+        return redirect("/breweries/");
     }
 
     
-    public function getEdit()
-    {
-        echo "edit existing brewery";
+    public function getEdit($id = null) {
+        
+        $brewery = \p4\Brewery::find($id);
+        if(is_null($brewery)) {
+            \Session::flash("flash_message","Couldn't find that brewery.");
+            return redirect("/breweries");
+        }
+        
+        return view("breweries.edit")
+            ->with(["brewery" => $brewery]);
     }
 
     
-    public function postEdit()
-    {
-        echo "post existing brewery edit";
+    public function postEdit(Request $request){
+        
+        $brewery = \p4\Brewery::find($request->id);
+        $brewery->brewery_name = $request->brewery;
+        $brewery->location = $request->location;
+        $brewery->description = $request->description;
+        $brewery->rating = $request->rating;
+        $brewery->brewery_image = $request->image;
+        
+        $brewery->save();
+        
+        return redirect("/breweries");
+        
     }
 
     
-    public function postDelete()
-    {
-        echo "delete a brewery";
+    public function getDelete($brewery_id){
+        $brewery = \p4\Brewery::find($brewery_id);
+        
+        $brewery->delete();
+        
+        return redirect("/breweries");
     }
 
     
