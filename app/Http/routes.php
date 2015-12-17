@@ -40,7 +40,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::post('/breweries/edit', 'BreweryController@postEdit');
     
-    Route::get('/beers/delete/{id?}', 'BeerController@getDelete');
+    Route::get('/breweries/delete/{id?}', 'BreweryController@getDelete');
 });
 
 

@@ -6,7 +6,7 @@
     <div class="panel-body">
     <div class="row">
     <div class="col-md-6">
-    <h1>{{ $brewery->brewery_name }} by {{ $brewery->brewery_name }}</h1>
+    <h1>{{ $brewery->brewery_name }}</h1>
     <br> {{ $brewery->description }}
     <br>
     

@@ -1,6 +1,13 @@
 @extends("layouts.master") 
 @section("content") 
-
+@if(sizeof($beers) == 0)
+<div class="panel panel-default">
+    Looks like you haven't added any beers. Get drinking!
+    <a href="/beers/add/"><button type="button" class="btn btn-primary btn-lg">
+        Add beer
+        </button></a>
+</div>
+@else
 @foreach($beers as $beer)
 <div class="panel panel-default">
     <div class="panel-body">
@@ -43,5 +50,6 @@
     </div>
 </div>
 @endforeach 
+@endif
 
 @stop
