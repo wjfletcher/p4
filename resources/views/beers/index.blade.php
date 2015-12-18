@@ -13,6 +13,13 @@
 </div>
 </div>
 @else
+<div class="panel panel-default">
+    <div class="panel-body">
+<a class="btn btn-primary" href="/beers/add/">
+        Add beer
+    </a>
+    </div>
+</div>
 @foreach($beers as $beer)
 <div class="panel panel-default">
     <div class="panel-body">
@@ -22,8 +29,9 @@
     <br> {{ $beer->description }}
     <br>
     
-        <br> <input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=10 data-showclear="false" disabled="true" step=1 data-size="xs" > <div class="rating"></div>
+        <br> <input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=10 data-show-clear="false" data-show-caption="false" disabled="true" step=1 data-size="xs" > {{ $beer->rating/2 }}
     <br>
+        <br>
         <div class="btn-group">
         <a href="/beers/edit/{{$beer->id}}" class="btn btn-primary">Edit</a>
     <!-- Button trigger modal -->
