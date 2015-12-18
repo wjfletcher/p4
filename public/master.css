@@ -11,6 +11,9 @@ body {
     text-align: center;
 }
 
+.img-responsive {
+    margin: 0 auto;
+}
 .navbar-header {
    background-color: rgba(62, 35, 0, 1); 
 }

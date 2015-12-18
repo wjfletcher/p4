@@ -37,7 +37,7 @@
         <input type="text" id="label" class="form-control" name="label" value="{{ $beer -> beer_label }}">
         </div>
         <br>
-        <button type="submit">Save edit</button>
+        <button class="btn btn-success" type="submit">Save edit</button>
     </form>
 </div>
 </div>
