@@ -31,7 +31,7 @@
         <br>
         <div class="input-group">
         <span class="input-group-addon" id="basic-addon1">Rating</span>
-        <div class="rating-box form-control"><input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=10 step=1 data-size="xs" ></div>
+        <div class="rating-box form-control"><input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=10 step=1 data-show-caption="false" data-size="xs" ></div>
         </div>
         <br>
         <div class="input-group">

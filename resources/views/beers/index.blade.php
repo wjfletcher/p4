@@ -29,7 +29,7 @@
     <br> {{ $beer->description }}
     <br>
     
-        <br> <input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=10 data-show-clear="false" data-show-caption="false" disabled="true" step=1 data-size="xs" > {{ $beer->rating/2 }}
+        <br> <input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=10 data-show-clear="false" data-show-caption="false" disabled="true" step=1 data-size="xs" > {{ $beer->rating/2 }}/5
     <br>
         <br>
         <div class="btn-group">
