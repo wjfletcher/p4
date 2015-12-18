@@ -1,27 +1,21 @@
-## Laravel PHP Framework
+# Project 4 - Beerdrinker
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Live URL
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+http://p4.wjfletcher.me
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Screencast demo
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
+## Description
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+This is the final project for CSCI E-15. We were given the task to build a web app using the Laravel framework which include everything we've learned from the course. What I decided to build was an app to record the beers you drink and the breweries you visit. As beer-lover with an interest in breweries and the brewing process, I wanted to make something that I would actually find useful. I've tried using a beer diary, but found that I never had it with me when I wanted to write down what I thought of the beer. In this app, you register with your name and email, and then you can start building your own personal list of beers and breweries. For a beer, you can record the name, the brewery, a description, a star rating, as well as add a url for an image of the beer. Similarly for breweries, you can add the name, location, a description, a star rating, as well as a url for an image of the brewery.
 
-## Security Vulnerabilities
+## Outside code
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+http://getbootstrap.com/
 
-### License
+http://laravel.com/
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+https://github.com/kartik-v/bootstrap-star-rating

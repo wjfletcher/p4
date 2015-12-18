@@ -3,6 +3,14 @@
 @section ("content")
 <div class="panel panel-default">
     <div class="panel-body">
+        <h1>Edit Brewery</h1>
+        @if(count($errors) > 0)
+        <ul class='errors'>
+            @foreach ($errors->all() as $error)
+                <li><span class='fa fa-exclamation-circle'></span> {{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
     <form method="POST" action="/breweries/edit">
         
         <input type="hidden" value="{{ csrf_token() }}" name="_token">

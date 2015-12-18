@@ -31,6 +31,15 @@ class BeerController extends Controller
     
     public function postAdd(Request $request)
     {
+        $this->validate($request, [
+    'name' => 'required|string|max:25',
+    'brewery' => 'required|string|max:25',
+    'type' => 'required|string|max:25',
+    'description' => 'required|string|max:255',
+    'label' => 'required|url',
+    
+]);
+        
         $beer = new \p4\Beer;
         
         $beer->user_id = \Auth::id();
@@ -62,6 +71,15 @@ class BeerController extends Controller
 
     
     public function postEdit(Request $request){
+        
+        $this->validate($request, [
+    'name' => 'required|string|max:25',
+    'brewery' => 'required|string|max:25',
+    'type' => 'required|string|max:25',
+    'description' => 'required|string|max:255',
+    'label' => 'required|url',
+    
+]);
         
         $beer = \p4\Beer::find($request->id);
         $beer->beer_name = $request->name;
