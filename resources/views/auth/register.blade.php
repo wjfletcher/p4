@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-
+    <div class="panel panel-default">
+        <div class="panel-body">
     <p>Already have an account? <a href='/login'>Login here...</a></p>
 
     <h1>Register</h1>
@@ -40,5 +41,6 @@
         <button type='submit' class='btn btn-primary'>Register</button>
 
     </form>
-
+        </div>
+</div>
 @stop

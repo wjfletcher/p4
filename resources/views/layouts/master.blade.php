@@ -20,13 +20,14 @@
     <!-- Custom CSS -->
 
     <link rel="stylesheet" href="{{ URL::asset('master.css') }}">
+    <link href="/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
 
     @if(\Session::has('flash_message'))
-        <div class='flash_message'>
+        <div class='alert alert-warning'>
             {{ \Session::get('flash_message') }}
         </div>
     @endif
@@ -40,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="img/beerdrinkerlogo.png"></a>
+                <a class="navbar-brand" href="/"><img src="/img/beerdrinkerlogo.png"></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -95,7 +96,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+<script src="/js/star-rating.min.js" type="text/javascript"></script>
 </body>
 
 </html>

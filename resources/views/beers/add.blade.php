@@ -21,7 +21,7 @@
         <textarea id="description" name="description">{{ old("description", "nice and tasty") }}</textarea>
         <br>
         <label>Rating</label>
-        <input type="number" id="rating" name="rating" value="{{ old("rating", "8") }}">
+        <input id="input-id" type="number" class="rating" name="rating" value="{{ old("rating", "4") }}" min=0 max=5 step=0.5 data-size="sm" >
         <br>
         <label>Beer label (url)</label>
         <input type="text" id="label" name="label" value="{{ old("label", "http://www.magichat.net/images/elixirs/logos/numbernine-logo.png") }}">
@@ -30,4 +30,6 @@
     </form>
 </div>
 </div>
+
+
 @stop

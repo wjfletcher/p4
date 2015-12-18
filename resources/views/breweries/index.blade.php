@@ -1,6 +1,16 @@
 @extends("layouts.master") 
 @section("content") 
-
+@if(sizeof($breweries) == 0)
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h3>Looks like you haven't added any breweries. Go check one out and report back!</h3>
+    <br>
+    <a class="btn btn-primary" href="/breweries/add/">
+        Add brewery
+    </a>
+</div>
+</div>
+@else
 @foreach($breweries as $brewery)
 <div class="panel panel-default">
     <div class="panel-body">
@@ -10,13 +20,15 @@
     <br> {{ $brewery->description }}
     <br>
     
-    <br> {{ $brewery->rating }}
+    <br> <input id="input-id" type="number" class="rating" name="rating" value="{{ $brewery->rating }}" min=0 max=5 data-showclear="false" disabled="true" step=0.5 data-size="xs" >
     <br>
-        <a style="color:black" href="/breweries/edit/{{$brewery->id}}">Edit</a>
+        <div class="btn-group">
+        <a href="/breweries/edit/{{$brewery->id}}" class="btn btn-primary">Edit</a>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
         Delete
     </button>
+    </div>
     </div>
     
     <div class="col-md-6">
@@ -43,5 +55,5 @@
     </div>
 </div>
 @endforeach 
-
+@endif
 @stop

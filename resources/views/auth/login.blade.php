@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-
+    <div class="panel panel-default">
+        <div class="panel-body">
     <p>Don't have an account? <a href='/register'>Register here...</a></p>
 
     <h1>Login</h1>
@@ -13,7 +14,7 @@
             @endforeach
         </ul>
     @endif
-
+    
     <form method='POST' action='/login'>
 
         {!! csrf_field() !!}
@@ -28,12 +29,11 @@
             <input type='password' name='password' id='password' value='{{ old('password') }}'>
         </div>
 
-        <div class='form-group'>
-            <input type='checkbox' name='remember' id='remember'>
-            <label for='remember' class='checkboxLabel'>Remember me</label>
-        </div>
+        
 
         <button type='submit' class='btn btn-primary'>Login</button>
 
     </form>
+        </div>
+</div>
 @stop

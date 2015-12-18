@@ -1,7 +1,8 @@
 @extends("layouts.master")
 
 @section ("content")
-
+<div class="panel panel-default">
+    <div class="panel-body">
     <form method="POST" action="/breweries/edit">
         
         <input type="hidden" value="{{ csrf_token() }}" name="_token">
@@ -25,7 +26,8 @@
         <br>
         <button type="submit">Save edit</button>
     </form>
-    
+    </div>
+</div>
 
 
 @stop
