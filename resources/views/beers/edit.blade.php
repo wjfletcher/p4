@@ -29,8 +29,10 @@
         <textarea id="description" class="form-control" name="description">{{ $beer -> description }}</textarea>
         </div>
         <br>
-        <label>Rating</label>
-        <div class="rating-box"><input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=5 step=0.5 data-size="xs" ></div>
+        <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Rating</span>
+        <div class="rating-box form-control"><input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=10 step=1 data-size="xs" ></div>
+        </div>
         <br>
         <div class="input-group">
         <span class="input-group-addon" id="basic-addon1">Beer label (url)</span>

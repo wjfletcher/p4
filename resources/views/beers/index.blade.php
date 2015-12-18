@@ -22,7 +22,7 @@
     <br> {{ $beer->description }}
     <br>
     
-        <br> <input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=5 data-showclear="false" disabled="true" step=0.5 data-size="xs" > <div class="rating"></div>
+        <br> <input id="input-id" type="number" class="rating" name="rating" value="{{ $beer->rating }}" min=0 max=10 data-showclear="false" disabled="true" step=1 data-size="xs" > <div class="rating"></div>
     <br>
         <div class="btn-group">
         <a href="/beers/edit/{{$beer->id}}" class="btn btn-primary">Edit</a>

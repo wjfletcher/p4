@@ -9,22 +9,35 @@
         
         <input type="hidden" name="id" value="{{ $brewery -> id }}">
         
-        <label>Brewery Name</label>
-        <input type="text" id="brewery" name="brewery" value="{{ $brewery -> brewery_name }}">
+        <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Brewery Name</span>
+        <input type="text" class="form-control" id="brewery" name="brewery" value="{{ $brewery -> brewery_name }}">
+        </div>
         <br>
-        <label>Location</label>
-        <input type="text" id="location" name="location" value="{{ $brewery -> location }}">
+            <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Location</span>
+        <input type="text" class="form-control" id="location" name="location" value="{{ $brewery -> location }}">
+        </div>
         <br>       
-        <label>What did you think of it?</label>
-        <textarea id="description" name="description">{{ $brewery -> description }}</textarea>
+        
+                <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">What did you think of it?</span>
+        <textarea id="description" class="form-control" name="description">{{ $brewery -> description }}</textarea>
+        </div>
         <br>
-        <label>Rating</label>
-        <input type="number" id="rating" name="rating" value="{{ $brewery -> rating }}">
+        
+        <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Rating</span>
+        <div class="rating-box form-control"><input id="input-id" type="number" class="rating" name="rating" value="{{ $brewery->rating }}" min=0 max=10 step=1 data-show-caption="false" data-size="xs" ></div>
+        </div>
         <br>
-        <label>Picture of brewery (url)</label>
-        <input type="text" id="image" name="image" value="{{ $brewery -> brewery_image }}">
+        
+                    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Picture of brewery</span>
+        <input type="text" id="image" class="form-control" name="image" value="{{ $brewery -> brewery_image }}">
+        </div>
         <br>
-        <button type="submit">Save edit</button>
+        <button class="btn btn-success" type="submit">Save edit</button>
     </form>
     </div>
 </div>

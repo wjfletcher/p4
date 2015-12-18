@@ -19,16 +19,16 @@
 
         {!! csrf_field() !!}
 
-        <div class='form-group'>
-            <label for='email'>Email</label>
-            <input type='text' name='email' id='email' value='{{ old('email') }}'>
+        <div class='input-group'>
+            <span class="input-group-addon" id="basic-addon1">Email</span>
+            <input type='email' class="form-control" name='email' id='email' value='{{ old('email') }}'>
         </div>
-
-        <div class='form-group'>
-            <label for='password'>Password</label>
-            <input type='password' name='password' id='password' value='{{ old('password') }}'>
+<br>
+        <div class='input-group'>
+            <span class="input-group-addon" id="basic-addon1">Password</span>
+            <input type='password' class="form-control" name='password' id='password' value='{{ old('password') }}'>
         </div>
-
+        <br>
         
 
         <button type='submit' class='btn btn-primary'>Login</button>

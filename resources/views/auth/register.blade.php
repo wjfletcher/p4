@@ -18,25 +18,29 @@
     <form method='POST' action='/register'>
         {!! csrf_field() !!}
 
-        <div class='form-group'>
-            <label for='name'>Name</label>
-            <input type='text' name='name' id='name' value='{{ old('name') }}'>
+        <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Name</span>
+            <input type='text' class="form-control" name='name' id='name' value='{{ old('name') }}' required>
         </div>
+        <br>
 
-        <div class='form-group'>
-            <label for='email'>Email</label>
-            <input type='text' name='email' id='email' value='{{ old('email') }}'>
+        <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Email</span>
+            <input type='email' class="form-control" name='email' id='email' value='{{ old('email') }}' required>
         </div>
+        <br>
 
-        <div class='form-group'>
-            <label for='password'>Password</label>
-            <input type='password' name='password' id='password'>
+        <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Password</span>
+            <input type='password' class="form-control" name='password' id='password' required>
         </div>
+        <br>
 
-        <div class='form-group'>
-            <label for='password_confirmation'>Confirm Password</label>
-            <input type='password' name='password_confirmation' id='password_confirmation'>
+        <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Confirm Password</span>
+            <input type='password' class="form-control" name='password_confirmation' id='password_confirmation' required>
         </div>
+        <br>
 
         <button type='submit' class='btn btn-primary'>Register</button>
 

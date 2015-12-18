@@ -20,8 +20,10 @@
     <br> {{ $brewery->description }}
     <br>
     
-    <br> <input id="input-id" type="number" class="rating" name="rating" value="{{ $brewery->rating }}" min=0 max=5 data-showclear="false" disabled="true" step=0.5 data-size="xs" >
+        <br> 
+        <input id="input-id" type="number" class="rating" name="rating" value="{{ $brewery->rating }}" min=0 max=10 data-showclear="false" disabled="true" data-show-clear="false" data-show-caption="false" step=1 data-size="xs" >{{ $brewery->rating/2 }}
     <br>
+        <br>
         <div class="btn-group">
         <a href="/breweries/edit/{{$brewery->id}}" class="btn btn-primary">Edit</a>
     <!-- Button trigger modal -->
