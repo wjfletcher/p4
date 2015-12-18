@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="DWA portfolio">
+    <meta name="description" content="BeerDrinker">
     <meta name="author" content="Warren Fletcher">
-
-    <title>DWA Portfolio</title>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <title>BeerDrinker</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -68,10 +68,10 @@
                             <li><a href="http://p2.wjfletcher.me">View</a></li>
                             <li><a href="https://github.com/wjfletcher/p2">Github</a></li>
                             <li class="title">Developers Best Friend</li>
-                            <li><a href="#">View</a></li>
+                            <li><a href="http://p3.wjfletcher.me">View</a></li>
                             <li><a href="https://github.com/wjfletcher/p3">Github</a></li>
-                            <li class="title">Developers Best Friend</li>
-                            <li><a href="https://p4.wjfletcher.me">View</a></li>
+                            <li class="title">Beerdrinker</li>
+                            <li><a href="http://p4.wjfletcher.me">View</a></li>
                             <li><a href="https://github.com/wjfletcher/p4">Github</a></li>
                         </ul>
                     </li>
