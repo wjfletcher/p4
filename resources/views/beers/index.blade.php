@@ -32,7 +32,7 @@
     </button>
     </div>
     </div>
-    
+    <br>
     <div class="col-md-6">
         <div class="thumbnail"><img src='{{ $beer->beer_label }}'></div>
     </div>
