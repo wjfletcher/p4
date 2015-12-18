@@ -34,7 +34,7 @@ class BreweryController extends Controller
     'brewery' => 'required|string|max:25',
     'location' => 'required|string|max:25',
     'description' => 'required|string|max:255',
-    'image' => 'required|url',
+    'image' => 'required',
         ]);
         $brewery = new \p4\Brewery;
         
@@ -71,7 +71,7 @@ class BreweryController extends Controller
     'brewery' => 'required|string|max:25',
     'location' => 'required|string|max:25',
     'description' => 'required|string|max:255',
-    'image' => 'required|url',
+    'image' => 'required',
         ]);
         
         $brewery = \p4\Brewery::find($request->id);

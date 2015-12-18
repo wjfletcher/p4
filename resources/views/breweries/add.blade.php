@@ -1,7 +1,14 @@
 @extends("layouts.master") @section ("content")
 <div class="panel panel-default">
     <div class="panel-body">
-        <h1>Add a brewery</h1>
+        <h1>Add Brewery</h1> 
+        @if(count($errors) > 0)
+        <ul class='errors'>
+            @foreach ($errors->all() as $error)
+            <li><span class='fa fa-exclamation-circle'></span> {{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
         <form method="POST" action="/breweries/add">
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
 

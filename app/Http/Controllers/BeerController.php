@@ -36,7 +36,7 @@ class BeerController extends Controller
     'brewery' => 'required|string|max:25',
     'type' => 'required|string|max:25',
     'description' => 'required|string|max:255',
-    'label' => 'required|url',
+    'label' => 'required',
     
 ]);
         
@@ -77,7 +77,7 @@ class BeerController extends Controller
     'brewery' => 'required|string|max:25',
     'type' => 'required|string|max:25',
     'description' => 'required|string|max:255',
-    'label' => 'required|url',
+    'label' => 'required',
     
 ]);
         
