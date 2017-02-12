@@ -2,7 +2,7 @@
 
 ## Live URL
 
-http://p4.wjfletcher.me
+https://beerdrinker.herokuapp.com/
 
 ## Screencast demo
 
