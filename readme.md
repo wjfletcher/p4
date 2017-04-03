@@ -2,7 +2,7 @@
 
 ## Live URL
 
-http://p4.wjfletcher.me
+https://beerdrinker.herokuapp.com/
 
 ## Screencast demo
 
@@ -19,3 +19,7 @@ http://getbootstrap.com/
 http://laravel.com/
 
 https://github.com/kartik-v/bootstrap-star-rating
+
+## Issues
+
+Initial load of site on Heroku loads page without correct formatting. Going to a link and back home fixes formatting.
