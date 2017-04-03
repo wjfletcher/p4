@@ -22,4 +22,6 @@ https://github.com/kartik-v/bootstrap-star-rating
 
 ## Issues
 
-Initial load of site on Heroku loads page without correct formatting. Going to a link and back home fixes formatting.
+Fixed! Initial load of site on Heroku loads page without correct formatting. Going to a link and back home fixes formatting.
+
+This issue was caused by the assets helper method creating an insecure url, causing a "mixed content" error.
