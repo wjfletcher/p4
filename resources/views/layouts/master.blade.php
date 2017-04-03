@@ -19,7 +19,7 @@
 
     <!-- Custom CSS -->
 
-    <link rel="stylesheet" href="{{ URL::asset('master.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('master.css', true) }}">
     <link href="/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
 
 </head>
@@ -31,7 +31,7 @@
             {{ \Session::get('flash_message') }}
         </div>
     @endif
-    
+
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -85,7 +85,7 @@
     <br>
     <br>
     <div class="container">
-        
+
 
         @yield('content')
 
